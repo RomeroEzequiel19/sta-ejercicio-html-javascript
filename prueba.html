@@ -1,0 +1,30 @@
+<h1>Ejercicio con html y javascript sencillo</h1>
+
+<input type="text" value="" id="miValor" />
+<button id="boton" onclick="ejecutar()">Apretar</button>
+<br />
+<label id="idTexto">Cargue algo por favor</label>
+
+<script>
+  let label = document.getElementById("idTexto");
+  let miValor = document.getElementById("miValor");
+
+  label.style.display = "none";
+
+  function ejecutar() {
+    if (miValor.value.trim() !== "") {
+      label.style.display = "none";
+      alert(`Usted cargó esto: ${miValor.value}`);
+      console.log(`Usted cargó esto: ${miValor.value}`);
+    } else {
+      label.style.display = "block";
+      label.style.backgroundColor = "yellow";
+      label.style.color = "red";
+      label.style.width = "200px";
+      label.style.marginTop = "5px";
+      label.style.textAlign = "center";
+      label.style.padding = "5px";
+      label.style.borderRadius = "10px";
+    }
+  }
+</script>
